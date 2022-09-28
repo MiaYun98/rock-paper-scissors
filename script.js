@@ -5,8 +5,6 @@ var lose = 0;
 var tie = 0;
 
 if (game == true) {
-    main();
-    var game = confirm("Again?")
     while (game == true) {
         main();
     }
