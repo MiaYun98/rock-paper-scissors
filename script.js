@@ -17,7 +17,6 @@ if (game == true) {
 function main() {
     var choice = ["R", "P", "S"];
 
-
     // asking R, P, S. 
     var asking = prompt ("R, P, S ?");
 
@@ -58,10 +57,13 @@ function main() {
     function answerP() {
         if (asking == "P" && computerAnswer == "R") {
             alert("You win the game");
+            win++;
         } else if (asking == "P" && computerAnswer == "S") {
             alert("You lost the game");
+            lose++;
         } else {
             alert("tie.tie");
+            tie++;
         }
     }
 
@@ -69,10 +71,13 @@ function main() {
     function answerS() {
         if (asking == "S" && computerAnswer == "P") {
             alert("You win the game");
+            win++;
         } else if (asking == "S" && computerAnswer == "R") {
             alert("You lost the game");
+            lose++;
         } else {
             alert("tie.tie");
+            tie++;
         }
     }
 
@@ -81,6 +86,9 @@ function main() {
     // win :  + win
     // Lost:  + lose 
     // tie :  + tie`)
-    alert ("Win: " + win + "lose: " + lose + "Tie: " + tie)
+    alert (`
+    Win: `+ win + `
+    Lose: ` + lose + `
+    Tie: ` + tie)
     return (win, lose, tie);
 }
